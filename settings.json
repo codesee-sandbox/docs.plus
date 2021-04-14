@@ -651,7 +651,7 @@
   "ep_webpack": {
     "bundleCSS": false,
     "ignoredParts": ["comments_page", "ep_comments_page","horizontal_line","page_view","ep_headings2/static/js/index"],
-    "customWebpackConfigFile": "../../webpack.config.js"
+    "customWebpackConfigFile": "${FOLDER_PATH:../../webpack.config.js}"
   },
   "ep_meta_desc": "docs.plus - docs but better !",
   "ep_meta_img_url": "https://docs.plus/static/images/social-logo.png",

@@ -14,18 +14,18 @@ var CSS_SIMPLE_FILENAME = 'css/all.css';
 
 var baseConfigs = {
   mode: isProduction ? 'production' : 'development',
-  entry: path.resolve(__dirname, 'static/js/index.js'),
+  entry: path.resolve(__dirname, 'src/static/js/index.js'),
 
   output: {
     filename: JS_FILENAME,
-    path: path.resolve(__dirname, './static/dist'),
+    path: path.resolve(__dirname, 'src/static/dist'),
     // create bundles with module.exports, so ep.json can access those targets
     libraryTarget: 'commonjs2',
   },
 
   // where webpack should look for modules required here
   resolveLoader: {
-    modules: [path.resolve(__dirname, 'node_modules'), 'node_modules'],
+    modules: [path.resolve(__dirname, 'src/node_modules'), 'node_modules'],
   },
 
   plugins: [
@@ -123,9 +123,4 @@ var cssAndMinifyConfigs = {
   ],
 };
 
-module.exports = {
-  default: baseConfigs,
-  withMinify: merge(baseConfigs, minifyConfigs),
-  withCss: merge(baseConfigs, cssConfigs),
-  withMinifyAndCss: merge(baseConfigs, cssConfigs, minifyConfigs, cssAndMinifyConfigs),
-};
+module.exports = baseConfigs;
