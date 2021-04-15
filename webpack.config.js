@@ -73,7 +73,7 @@ var baseConfigs = {
       },
       {
         test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules|bower_components|vendors)/,
         use: {
           loader: 'babel-loader',
           options: {
