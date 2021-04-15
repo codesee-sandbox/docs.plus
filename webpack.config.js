@@ -18,14 +18,14 @@ var baseConfigs = {
 
   output: {
     filename: JS_FILENAME,
-    path: path.resolve(__dirname, 'src/static/dist'),
+    path: path.resolve(__dirname, 'node_modules/ep_webpack/static/dist'),
     // create bundles with module.exports, so ep.json can access those targets
     libraryTarget: 'commonjs2',
   },
 
   // where webpack should look for modules required here
   resolveLoader: {
-    modules: [path.resolve(__dirname, 'src/node_modules'), 'node_modules'],
+    modules: [path.resolve(__dirname, 'node_modules/ep_webpack/node_modules'), 'node_modules'],
   },
 
   plugins: [
@@ -71,6 +71,18 @@ var baseConfigs = {
           options: { inline: true },
         }
       },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [],
+            plugins: [
+            ].concat([["@codesee/instrument", { hosted: true }]])
+          }
+        }
+      }
     ],
   },
 };
