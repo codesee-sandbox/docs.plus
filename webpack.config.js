@@ -79,7 +79,7 @@ var baseConfigs = {
           options: {
             presets: [],
             plugins: [
-            ].concat([["@codesee/instrument", { hosted: true }]])
+            ].concat(isProduction ? [] : [["@codesee/instrument", { hosted: true }]])
           }
         }
       }
