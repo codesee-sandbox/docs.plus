@@ -649,8 +649,8 @@
     "paymentPointer": "${PAYMENT_POINTER:$pay.stronghold.co/1a18448192af7924854a52078ffc535a89b}"
   },
   "ep_webpack": {
-    "bundleCSS": false,
-    "ignoredParts": ["comments_page", "ep_comments_page","horizontal_line","page_view","ep_headings2/static/js/index"],
+    // "bundleCSS": false,
+    // "ignoredParts": ["comments_page", "ep_comments_page","horizontal_line","page_view","ep_headings2/static/js/index"],
     "customWebpackConfigFile": "${FOLDER_PATH:../../webpack.config.js}"
   },
   "ep_meta_desc": "docs.plus - docs but better !",
