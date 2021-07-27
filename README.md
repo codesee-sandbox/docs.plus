@@ -2,7 +2,8 @@
 
 First, let's install some plugins:
 
-        npm install --no-save --legacy-peer-deps ep_webpack https://github.com/samirsayyad/ep_full_hyperlinks.git
+        npm install --no-save --legacy-peer-deps ep_webpack https://github.com/samirsayyad/ep_full_hyperlinks.git 
+        npm install --no-save @babel/core babel-loader @codesee/tracker@latest @codesee/babel-plugin-instrument@latest
 
 Then, let's run docs.plus:
 
